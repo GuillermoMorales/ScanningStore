@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "291460660726",
+    "project_id": "scan-store",
+    "storage_bucket": "scan-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291460660726:android:baf5b05bd99b2d0502dbd7",
+        "android_client_info": {
+          "package_name": "com.storemaker.scanstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291460660726-du98enmg67dfutfpn4u40psm6bav8po8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.storemaker.scanstore",
+            "certificate_hash": "0c9c58164b962fd41f8b5262f2ac149eb050a9cc"
+          }
+        },
+        {
+          "client_id": "291460660726-2lqn7q5to4jknia4fjbcv8rsmbf3ehm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyjj5jctSRN0me7HcoELQOcdcHmiabmF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291460660726-2lqn7q5to4jknia4fjbcv8rsmbf3ehm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

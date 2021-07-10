@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/client_nav_graph"
+    app:startDestination="@id/destination_client_home">
+
+    <fragment
+        android:id="@+id/destination_client_home"
+        android:name="com.storemaker.scanstore.fragments.ClientHomeFragment"
+        android:label="fragment_client_home"
+        tools:layout="@layout/fragment_client_home" >
+        <action
+            android:id="@+id/action_destination_client_home_to_clientProductInfo"
+            app:destination="@id/destination_client_product_info" />
+        <action
+            android:id="@+id/action_destination_client_home_to_clientCartFragment"
+            app:destination="@id/destination_client_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_client_product_info"
+        android:name="com.storemaker.scanstore.fragments.ClientProductInfo"
+        android:label="fragment_client_product_info"
+        tools:layout="@layout/fragment_client_product_info" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_client_cart"
+        android:name="com.storemaker.scanstore.fragments.ClientCartFragment"
+        android:label="fragment_client_cart"
+        tools:layout="@layout/fragment_client_cart" >
+        <action
+            android:id="@+id/action_destination_client_cart_to_clientCartDetailFragment"
+            app:destination="@id/destination_client_cart_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_client_cart_detail"
+        android:name="com.storemaker.scanstore.fragments.ClientCartDetailFragment"
+        android:label="fragment_client_cart_detail"
+        tools:layout="@layout/fragment_client_cart_detail" >
+        <argument
+            android:name="cartId"
+            app:argType="string" />
+    </fragment>
+</navigation>

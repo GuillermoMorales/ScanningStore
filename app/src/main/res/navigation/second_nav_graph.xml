@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_nav_graph"
+    app:startDestination="@id/destination_category">
+
+    <fragment
+        android:id="@+id/destination_category"
+        android:name="com.storemaker.scanstore.fragments.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_destination_category_to_destination_scan"
+            app:destination="@id/destination_product_list" />
+        <action
+            android:id="@+id/action_destination_category_to_categoryInfoFragment"
+            app:destination="@id/destination_category_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_product_list"
+        android:name="com.storemaker.scanstore.fragments.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_destination_product_list_to_productInfoFragment"
+            app:destination="@id/destination_product_info" />
+        <action
+            android:id="@+id/action_destination_product_list_to_destination_scan"
+            app:destination="@id/destination_scan" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_category_info"
+        android:name="com.storemaker.scanstore.fragments.CategoryInfoFragment"
+        android:label="fragment_category_info"
+        tools:layout="@layout/fragment_category_info" >
+        <argument
+            android:name="categoryId"
+            app:argType="string"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_product_info"
+        android:name="com.storemaker.scanstore.fragments.ProductInfoFragment"
+        android:label="fragment_product_info"
+        tools:layout="@layout/fragment_product_info" >
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_scan"
+        android:name="com.storemaker.scanstore.fragments.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_destination_scan_to_destination_product_info"
+            app:destination="@id/destination_product_info" />
+    </fragment>
+</navigation>

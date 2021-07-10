@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/destination_category"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Category">
+    </item>
+    <item
+        android:id="@+id/destination_product_list"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Products">
+    </item>
+
+</menu>
